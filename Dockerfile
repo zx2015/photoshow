@@ -44,7 +44,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 ADD photoshow.nginx /etc/nginx/conf.d/photoshow.conf
 RUN rm -f /etc/nginx/sites-enabled/default
 RUN ln -s /etc/nginx/sites-available/photoshow /etc/nginx/sites-enabled/photoshow
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+#RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 VOLUME ["/opt/PhotoShow/Photos", "/var/log", "/opt/PhotoShow/generated"]
 EXPOSE 80
